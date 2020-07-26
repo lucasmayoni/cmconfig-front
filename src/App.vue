@@ -1,17 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+        <div>
+            <b-navbar
+                toggleable="lg"
+                type="dark"
+                variant="info"
+                sticky>
+                <b-navbar-brand href="#">Stechs</b-navbar-brand>
+
+                <b-navbar-toggle target="nav-collapse"/>
+
+                <b-collapse
+                    id="nav-collapse"
+                    is-nav>
+                    <b-navbar-nav>
+                        <b-nav-item href="#">Modems</b-nav-item>
+                    </b-navbar-nav>
+
+                    <!-- Right aligned nav items -->
+                </b-collapse>
+            </b-navbar>
+        </div>
+        <b-container class="bv-example-row">
+            <b-col sm="12">
+                <vendor/>
+            </b-col>
+        </b-container>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import vendor from './components/vendors/vendor.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    vendor
   }
 }
 </script>
@@ -23,6 +49,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
