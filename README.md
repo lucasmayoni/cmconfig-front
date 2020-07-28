@@ -1,5 +1,7 @@
 # cmconfig-front
-
+## Requires
+- Node v10.18.1 (at least)
+- npm v6.14.7 (at least)
 ## Project setup
 ```
 npm install
@@ -19,6 +21,9 @@ npm run build
 ```
 npm run lint
 ```
+
+### SET API URL
+Modificar en services/vendors.js las URL acorde a las definidas para la API
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
